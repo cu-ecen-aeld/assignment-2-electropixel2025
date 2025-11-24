@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     const char *writefile = argv[1];
     const char *writestr  = argv[2];
 
-    openlog("My_logs", LOG_PID, LOG_USER);
+    openlog("My_logs", LOG_ODELAY, LOG_USER);
 
     syslog(LOG_DEBUG, "Writing %s to %s", writestr,  writefile);
 
